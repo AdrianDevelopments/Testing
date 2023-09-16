@@ -9,6 +9,7 @@ DECLARE @HashedPassword varbinary(500)
 DECLARE @CharCliente varchar(3)
 DECLARE @NumeroCliente int
 SET @HashedPassword = ENCRYPTBYPASSPHRASE('YARILYN',@Password)
+--Tomando los 2 primeros caracteres de la columna Nombre empezando por la derecha, y una vez tomados lo convertimos a INT
 SET @CharCliente = (SELECT TOP 1 CAST(RIGHT(Nombre, 2) AS INT) AS NumeroConvertido FROM Cliente ORDER BY IdCliente DESC)
 SET @NumeroCliente = @CharCliente + 1
 
