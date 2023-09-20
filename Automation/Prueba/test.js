@@ -1,5 +1,5 @@
 const { Builder, By, Key, until } = require("selenium-webdriver");
-const ElementId = require("./calcular")
+const ElementId = require("./calcular");
 const edge = require("selenium-webdriver/edge");
 const chrome = require("selenium-webdriver/chrome");
 const edgeDriver = require("edgedriver");
@@ -12,27 +12,27 @@ const ExecuteTest = async () => {
         .setEdgeService(service)
         .build();
     try {
-    
-     await driver.get("https://forms.gle/mzXctH9o5rGGk7cy7");
+        await driver.get("https://forms.gle/mzXctH9o5rGGk7cy7");
 
-    const elementId = new ElementId();
-    elementId.buildElementArray();
+        const elementId = new ElementId();
+        elementId.buildElementArray();
 
-    elementId.ElementArray.forEach(async(item) =>{
-        const radioButton = await driver.findElement(By.id(item))
-        await driver.wait(until.elementIsEnabled(radioButton))
-        await radioButton.click()
-    })
+        elementId.ElementArray.forEach(async (item) => {
+            const radioButton = await driver.findElement(By.id(item));
+            await driver.wait(until.elementIsVisible(radioButton));
+            await radioButton.click();
+        });
 
-    const button = await driver
-        .findElement(By.css(".uArJ5e.UQuaGc.Y5sE8d.VkkpIf.QvWxOd")).click()
-        
+        const button = await driver.findElement(
+            By.css(".uArJ5e.UQuaGc.Y5sE8d.VkkpIf.QvWxOd")
+        );
 
+        await driver.wait(until.elementIsVisible(button));
+        await button.click();
     } catch (error) {
-        console.error(error)
-    }finally{
-        
-    }  
+        console.error(error);
+    } finally {
+    }
 };
 
 ExecuteTest();
