@@ -116,3 +116,33 @@ END
 DECLARE @Resultado int
 EXEC @Resultado =  ReturnProcedure 7
 PRINT(@Resultado)
+
+--TRY...CATCH....
+USE PracticaI
+--Las transacciones nos permiten que revirtamos los datos o cambios dentro de su alcance si sucede algún error, en conjunto con los TRY...CATCH
+--Empezando transaccion
+BEGIN TRANSACTION;
+--Empezando bloque TRY
+BEGIN TRY
+	DECLARE @Password varchar(10)
+	DECLARE @EncryptedPassword varbinary(500)
+	SET @Password = '0611'
+	SET @EncryptedPassword = ENCRYPTBYPASSPHRASE('YarilynAmor', @Password)
+
+	INSERT INTO Cliente(Nombre, Cif, Email, Direccion, Usuario, Password, FechaAlta) VALUES ('Cliente 14', 'GFBSD455', '14@gmail.com', 'Naco II', 'Cliente14', @EncryptedPassword , GETDATE())
+	--SELECT 1/0
+	SELECT * FROM Cliente
+	--Confirmando la transaccion en caso de que todo salga bien, si no hago el COMMIT TRANSACTION la transaccion aún quedaria pendiente
+	COMMIT TRANSACTION
+--Finalizando bloque Try
+END TRY
+--Empezando bloque catch
+BEGIN CATCH
+--Mostrando el Numero del error y el Mensaje del Error
+	SELECT ERROR_NUMBER() As ID, ERROR_MESSAGE() As Mensaje
+	--
+	IF @@TRANCOUNT > 0
+		ROLLBACK TRANSACTION
+		--@@IDENTITY nos devuelve el ultimo registro insertado
+--Terminando bloque catch
+END CATCH
