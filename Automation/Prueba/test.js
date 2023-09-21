@@ -1,4 +1,5 @@
 const { Builder, By, Key, until } = require("selenium-webdriver");
+const ElementId = require("./calcular")
 const edge = require("selenium-webdriver/edge");
 const chrome = require("selenium-webdriver/chrome");
 const edgeDriver = require("edgedriver");
@@ -10,35 +11,28 @@ const ExecuteTest = async () => {
         .forBrowser("MicrosoftEdge")
         .setEdgeService(service)
         .build();
-    await driver.get("https://forms.gle/mzXctH9o5rGGk7cy7");
+    try {
+    
+     await driver.get("https://forms.gle/mzXctH9o5rGGk7cy7");
 
-    await driver.findElement(By.id("i14")).click();
-    await driver.findElement(By.id("i27")).click();
-    await driver.findElement(By.id("i46")).click();
-    await driver.findElement(By.id("i65")).click();
-    await driver.findElement(By.id("i84")).click();
+    const elementId = new ElementId();
+    elementId.buildElementArray();
 
-    await driver.findElement(By.id("i103")).click();
-    await driver.findElement(By.id("i122")).click();
-    await driver.findElement(By.id("i138")).click();
-    await driver.findElement(By.id("i157")).click();
-    await driver.findElement(By.id("i176")).click();
+    elementId.ElementArray.forEach(async(item) =>{
+        const radioButton = await driver.findElement(By.id(item))
+        await driver.wait(until.elementIsEnabled(radioButton))
+        await radioButton.click()
+    })
 
-    await driver.findElement(By.id("i195")).click();
-    await driver.findElement(By.id("i214")).click();
-    await driver.findElement(By.id("i233")).click();
-    await driver.findElement(By.id("i252")).click();
-    await driver.findElement(By.id("i271")).click();
+    const button = await driver
+        .findElement(By.css(".uArJ5e.UQuaGc.Y5sE8d.VkkpIf.QvWxOd")).click()
+        
 
-    await driver.findElement(By.id("i290")).click();
-    await driver.findElement(By.id("i309")).click();
-    await driver.findElement(By.id("i328")).click();
-    await driver.findElement(By.id("i347")).click();
-    await driver.findElement(By.id("i366")).click();
-
-    await driver
-        .findElement(By.css(".uArJ5e.UQuaGc.Y5sE8d.VkkpIf.QvWxOd"))
-        .click();
+    } catch (error) {
+        console.error(error)
+    }finally{
+        
+    }  
 };
 
 ExecuteTest();
