@@ -32,7 +32,31 @@ const ExecuteTest = async () => {
     } catch (error) {
         console.error(error);
     } finally {
+        setTimeout(() => {
+            driver.quit();
+        }, 3000);
     }
 };
 
-ExecuteTest();
+const CountTime = () => {
+    const time = Math.floor(Math.random() * 1000000);
+    const date = new Date();
+    console.log(`Hora actual: ${date.getHours()}: ${date.getMinutes()}`);
+    console.log(
+        `El script correra en aproximadamente ${Math.floor(
+            time / 1000
+        )} segundos o ${Math.round(time / 1000 / 60)} minutos`
+    );
+
+    if (time < 120000) return CountTime();
+    setTimeout(async () => {
+        await ExecuteTest();
+        console.log(
+            `Script ejecutado a las ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
+        );
+    }, time);
+};
+
+for (let index = 0; index < 10; index++) {
+    CountTime();
+}
