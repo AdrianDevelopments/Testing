@@ -12,6 +12,7 @@
   "dependencies": {
     "chromedriver": "^117.0.1",
     "edgedriver": "^5.3.7",
+    "readline-sync": "^1.4.10",
     "selenium-webdriver": "^4.12.0"
   }
 }
