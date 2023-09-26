@@ -15,7 +15,9 @@ const ExecuteTest = async (driver) => {
         elementId.buildElementArray();
 
         elementId.ElementArray.forEach(async (item) => {
-            const radioButton = await driver.findElement(By.css(`div.nWQGrd.zwllIb #${item}`));
+            const radioButton = await driver.findElement(
+                By.css(`div.nWQGrd.zwllIb #${item}`)
+            );
             const actions = driver.actions({ bridge: true });
             await driver.wait(until.elementIsVisible(radioButton));
             await actions.move({ origin: radioButton }).click().perform();
@@ -37,31 +39,34 @@ const ExecuteTest = async (driver) => {
 const Timer = async (date, time, iteration) => {
     if (iteration === 0 || driver === null) {
         // Si driver es null o es la primera iteración, crea una nueva sesión
-        
+
         return new Promise(async (resolve) => {
-        setTimeout(async () => {
-            driver = await createSessionEdge(service);
-            await Task(date, driver);
-            resolve();
-        }, 2000);
-    });
+            setTimeout(async () => {
+                driver = await createSessionEdge(service);
+                await Task(date, driver);
+                resolve();
+            }, 2000);
+        });
     } else {
         Logger(date, time);
 
         return new Promise(async (resolve) => {
-        setTimeout(async () => { 
-            driver = await createSessionEdge(service);
-            await Task(date, driver);
-            resolve();
-        }, time);
-    });
+            setTimeout(async () => {
+                driver = await createSessionEdge(service);
+                await Task(date, driver);
+                resolve();
+            }, time);
+        });
     }
-    
 };
 
 function Logger(date, time) {
     console.log(`Hora actual: ${date.getHours()}:${date.getMinutes()}`);
-    console.log(`El script correra en aproximadamente ${Math.floor(time / 1000)} segundos o ${Math.round(time / 1000 / 60)} minutos`);
+    console.log(
+        `El script correra en aproximadamente ${Math.floor(
+            time / 1000
+        )} segundos o ${Math.round(time / 1000 / 60)} minutos`
+    );
 }
 
 async function createSessionEdge(builder) {
@@ -82,7 +87,9 @@ async function closeSessionStorage(driver) {
 
 const Task = async (date, driver) => {
     await ExecuteTest(driver);
-    return console.log(`Script ejecutado a las ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`);
+    return console.log(
+        `Script ejecutado a las ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
+    );
 };
 
 const CountTime = async () => {
@@ -91,7 +98,7 @@ const CountTime = async () => {
         const date = new Date();
         if (time < 1200) return CountTime();
         await Timer(date, time, index);
-        
+
         // Al final de cada iteración, verifica si driver es una instancia válida antes de intentar cerrarla
         await closeSessionStorage(driver);
     }
