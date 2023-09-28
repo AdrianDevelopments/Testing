@@ -4,7 +4,10 @@
   "description": "",
   "main": "test.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "electron-vite dev",
+    "prebuild": "electron-vite build",
+    "start": "electron-vite preview"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +17,8 @@
     "edgedriver": "^5.3.7",
     "readline-sync": "^1.4.10",
     "selenium-webdriver": "^4.12.0"
+  },
+  "devDependencies": {
+    "electron-vite": "^1.0.28"
   }
 }
