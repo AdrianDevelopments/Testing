@@ -1,5 +1,5 @@
 appId: com.electron.app
-productName: electron-ui-app
+productName: frontend-ui-app
 directories:
   buildResources: build
 files:
@@ -11,7 +11,7 @@ files:
 asarUnpack:
   - resources/**
 win:
-  executableName: electron-ui-app
+  executableName: frontend-ui-app
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
   shortcutName: ${productName}

@@ -1,4 +1,4 @@
-# electron-ui-app
+# frontend-ui-app
 
 An Electron application with React
 
