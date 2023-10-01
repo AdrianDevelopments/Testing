@@ -1,4 +1,5 @@
 const { Builder, By, Key, until } = require("selenium-webdriver");
+const readline = require("readline-sync");
 const ElementId = require("./calcular");
 const edge = require("selenium-webdriver/edge");
 const edgeDriver = require("edgedriver");
@@ -7,9 +8,9 @@ let service = new edge.ServiceBuilder(edgeDriver.findEdgePath);
 // Inicializa driver como null antes del bucle CountTime
 let driver = null;
 
-const ExecuteTest = async (driver) => {
+const ExecuteTest = async (driver, link) => {
     try {
-        await driver.get("https://forms.gle/mzXctH9o5rGGk7cy7");
+        await driver.get(link);
 
         const elementId = new ElementId();
         elementId.buildElementArray();
@@ -36,14 +37,14 @@ const ExecuteTest = async (driver) => {
     }
 };
 
-const Timer = async (date, time, iteration) => {
+const Timer = async (date, time, iteration, link) => {
     if (iteration === 0 || driver === null) {
         // Si driver es null o es la primera iteración, crea una nueva sesión
 
         return new Promise(async (resolve) => {
             setTimeout(async () => {
                 driver = await createSessionEdge(service);
-                await Task(date, driver);
+                await Task(date, driver, link);
                 resolve();
             }, 2000);
         });
@@ -53,7 +54,7 @@ const Timer = async (date, time, iteration) => {
         return new Promise(async (resolve) => {
             setTimeout(async () => {
                 driver = await createSessionEdge(service);
-                await Task(date, driver);
+                await Task(date, driver, link);
                 resolve();
             }, time);
         });
@@ -85,22 +86,36 @@ async function closeSessionStorage(driver) {
     }
 }
 
-const Task = async (date, driver) => {
-    await ExecuteTest(driver);
+const Task = async (date, driver, link) => {
+    await ExecuteTest(driver, link);
     return console.log(
         `Script ejecutado a las ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
     );
 };
 
 const CountTime = async () => {
-    for (let index = 0; index <= 10; index++) {
-        const time = Math.floor(Math.random() * 100000);
-        const date = new Date();
-        if (time < 1200) return CountTime();
-        await Timer(date, time, index);
+    try {
+        console.log(
+            "AVISO: La version 1 de este programa solo acepta encuestas en Google Forms de 20 preguntas y 5 opciones"
+        );
+        console.log(" ");
+        const response = readline.question(
+            "Porfavor, introduce un link válido a una encuesta de Google Forms: "
+        );
+        for (let index = 0; index <= 10; index++) {
+            const time = Math.floor(Math.random() * 100000);
+            const date = new Date();
+            if (time < 1200) return CountTime();
+            await Timer(date, time, index, response);
 
-        // Al final de cada iteración, verifica si driver es una instancia válida antes de intentar cerrarla
-        await closeSessionStorage(driver);
+            // Al final de cada iteración, verifica si driver es una instancia válida antes de intentar cerrarla
+            await closeSessionStorage(driver);
+        }
+    } catch (error) {
+        console.error(
+            "Error: El link que ha introducido NO es válido. Reiniciando programa...."
+        );
+        CountTime();
     }
 };
 
