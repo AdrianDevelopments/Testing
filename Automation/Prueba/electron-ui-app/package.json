@@ -1,5 +1,5 @@
 {
-  "name": "frontend-ui-app",
+  "name": "electron-ui-app",
   "version": "1.0.0",
   "description": "An Electron application with React",
   "main": "./out/main/index.js",
@@ -30,11 +30,6 @@
     "electron": "^25.6.0",
     "electron-builder": "^24.6.3",
     "electron-vite": "^1.0.27",
-<<<<<<< HEAD:Automation/Prueba/electron-ui-app/package.json
-=======
-    "eslint": "^8.47.0",
-    "eslint-plugin-react": "^7.33.2",
->>>>>>> 25cad38f8abd6714e0a2627a0b2626a9a1c862ba:Automation/Prueba/frontend-ui-app/package.json
     "postcss": "^8.4.31",
     "prettier": "^3.0.2",
     "react": "^18.2.0",
