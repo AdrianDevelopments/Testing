@@ -1,0 +1,11 @@
+out
+dist
+pnpm-lock.yaml
+LICENSE.md
+tsconfig.json
+tsconfig.*.json
+<<<<<<< HEAD:Automation/Prueba/electron-ui-app/.prettierignore
+./src
+=======
+src/**/*
+>>>>>>> 25cad38f8abd6714e0a2627a0b2626a9a1c862ba:Automation/Prueba/frontend-ui-app/.prettierignore
