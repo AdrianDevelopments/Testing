@@ -1,12 +1,12 @@
 import { useState } from "react"
 
 
-const SeeIcon = ({seePassword, setSeePassword}) => {
+const SeeIcon = ({seePassword, setSeePassword, borderColor}) => {
 
     return seePassword ?
          (
-        <svg xmlns="http://www.w3.org/2000/svg" height="24" className="p-1 rounded-r-md border-solid border border-blue-500 h-full"
-        viewBox="0 -960 960 960" fill="gray" width="36" onClick={() => setSeePassword(false)}>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" className="p-1 rounded-r-md border-solid border h-full"
+        viewBox="0 -960 960 960" fill="gray" width="36" onClick={() => setSeePassword(false)} style={{borderColor}}>
             <path d="m644-428-58-58q9-47-27-88t-93-32l-58-58q17-8 34.5-12t37.5-4q75 0 
             127.5 52.5T660-500q0 20-4 37.5T644-428Zm128 126-58-56q38-29 
             67.5-63.5T832-500q-50-101-143.5-160.5T480-720q-29 0-57 4t-55 12l-62-62q41-17 
@@ -19,8 +19,8 @@ const SeeIcon = ({seePassword, setSeePassword}) => {
         )
     :
         (
-        <svg xmlns="http://www.w3.org/2000/svg" height="24" className="p-1 rounded-r-md border-solid border border-blue-500 h-full" viewBox="0 -960 960 960" 
-        width="36" onClick={() => setSeePassword(true)}>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" className="p-1 rounded-r-md border-solid border  h-full" viewBox="0 -960 960 960" 
+        width="36" style={{borderColor}} onClick={() => setSeePassword(true)}>
             <path d="M480-320q75 0 127.5-52.5T660-500q0-75-52.5-127.5T480-680q-75 
             0-127.5 52.5T300-500q0 75 52.5 127.5T480-320Zm0-72q-45 0-76.5-31.5T372-500q0-45 
             31.5-76.5T480-608q45 0 76.5 31.5T588-500q0 45-31.5 76.5T480-392Zm0 192q-146 
