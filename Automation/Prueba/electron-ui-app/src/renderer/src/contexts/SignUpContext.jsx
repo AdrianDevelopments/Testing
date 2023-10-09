@@ -1,4 +1,4 @@
-import { createContext, useReducer } from 'react'
+import { createContext, useReducer, useEffect } from 'react'
 
 const initialFormState = {
   nameValue: '',
@@ -11,40 +11,9 @@ const initialFormState = {
 export const SignUpContext = createContext([])
 
 const signUpReducer = (state, action) => {
-  switch (action.field) {
-    case 'name': {
-      return {
-        ...state,
-        nameValue: action.value
-      }
-    }
-    case 'email': {
-      return {
-        ...state,
-        emailValue: action.value
-      }
-    }
-    case 'password': {
-      return {
-        ...state,
-        passwordValue: action.value
-      }
-    }
-    case 'confirmPassword': {
-      return {
-        ...state,
-        confirmPasswordValue: action.value
-      }
-    }
-    case 'button': {
-      return {
-        ...state,
-        buttonValue: action.value
-      }
-    }
-    default: {
-      return state
-    }
+  return {
+    ...state,
+    [action.field]: action.value
   }
 }
 

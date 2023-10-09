@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import SeeIcon from './SeeIcon.jsx'
 import { SignUpContext } from '../contexts/SignUpContext.jsx'
 
@@ -8,15 +8,20 @@ const Field = ({
   stylesPropsContainer,
   stylesPropsInput,
   borderColor,
-  stateName = null
+  stateName
 }) => {
   const [seePassword, setSeePassword] = useState(true)
 
   const [state, dispatch] = useContext(SignUpContext)
 
   const handleChange = (e) => {
-    return dispatch({ field: stateName, value: e.target.value })
+    console.log(' Funcion ejecutada')
+    dispatch({ field: stateName, value: e.target.value })
   }
+
+  useEffect(() => {
+    console.log(state)
+  }, [state])
 
   return typeInput !== 'password' ? (
     <div className={`flex flex-row ${stylesPropsContainer}`}>
@@ -26,7 +31,6 @@ const Field = ({
         className={`border-solid border rounded-md w-full ${stylesPropsInput}`}
         onChange={(e) => {
           handleChange(e)
-          console.log(state)
         }}
       />
     </div>
@@ -38,7 +42,6 @@ const Field = ({
         className={`border-solid border border-r-0 rounded-l-md w-full ${stylesPropsInput}`}
         onChange={(e) => {
           handleChange(e)
-          console.log(state)
         }}
       />
       <SeeIcon
@@ -55,7 +58,6 @@ const Field = ({
         className={`border-solid border border-r-0 rounded-l-md w-full ${stylesPropsInput}`}
         onChange={(e) => {
           handleChange(e)
-          console.log(state)
         }}
       />
       <SeeIcon
