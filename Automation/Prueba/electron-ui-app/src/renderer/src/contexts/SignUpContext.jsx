@@ -11,15 +11,16 @@ const initialFormState = {
 export const SignUpContext = createContext([])
 
 const signUpReducer = (state, action) => {
-  if (!state.field) {
+  if (!action.field) {
     return {
       ...state,
       buttonValue: action.value
     }
-  }
-  return {
-    ...state,
-    [action.field]: action.value
+  } else {
+    return {
+      ...state,
+      [action.field]: action.value
+    }
   }
 }
 

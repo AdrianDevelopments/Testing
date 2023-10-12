@@ -17,6 +17,10 @@ const DisabledCustomButton = ({
   const [active, setActive] = useState(false)
   const [state, dispatch] = useContext(SignUpContext)
 
+  const Verify = () => {
+    
+  }
+
   useEffect(() => {
     console.log('Desde el button')
     console.log(state)
@@ -63,7 +67,7 @@ const DisabledCustomButton = ({
   return (
     <button
       style={
-        !state.buttonValue
+        !state || !state.buttonValue
           ? disabledButtonStyle
           : active
           ? activeButtonStyle
@@ -77,11 +81,11 @@ const DisabledCustomButton = ({
       onMouseLeave={() => {
         setHover(false)
         setActive(false)
-        dispatch({ value: !state.buttonValue })
+        /*dispatch({ value: !state.buttonValue })*/
       }}
       onMouseDown={() => setActive(true)}
       onMouseUp={() => setActive(false)}
-      disabled={!state.buttonValue}
+      disabled={!state || !state.buttonValue}
       onClick={() => {}}
     >
       {text}

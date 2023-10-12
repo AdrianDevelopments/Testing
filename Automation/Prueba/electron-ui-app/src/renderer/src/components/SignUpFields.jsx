@@ -15,7 +15,6 @@ const SignUpField = ({
   const [state, dispatch] = useContext(SignUpContext)
 
   const handleChange = (e) => {
-    console.log(' Funcion ejecutada')
     dispatch({ field: stateName, value: e.target.value })
   }
 
