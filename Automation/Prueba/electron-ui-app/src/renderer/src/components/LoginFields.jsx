@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from 'react'
 import SeeIcon from './SeeIcon.jsx'
 import { SignUpContext } from '../contexts/SignUpContext.jsx'
 
-const Field = ({
+const LoginField = ({
   typeInput,
   placeholder,
   stylesPropsContainer,
@@ -12,26 +12,12 @@ const Field = ({
 }) => {
   const [seePassword, setSeePassword] = useState(true)
 
-  const [state, dispatch] = useContext(SignUpContext)
-
-  const handleChange = (e) => {
-    console.log(' Funcion ejecutada')
-    dispatch({ field: stateName, value: e.target.value })
-  }
-
-  useEffect(() => {
-    console.log(state)
-  }, [state])
-
   return typeInput !== 'password' ? (
     <div className={`flex flex-row ${stylesPropsContainer}`}>
       <input
         type={typeInput}
         placeholder={placeholder}
         className={`border-solid border rounded-md w-full ${stylesPropsInput}`}
-        onChange={(e) => {
-          handleChange(e)
-        }}
       />
     </div>
   ) : seePassword ? (
@@ -40,9 +26,6 @@ const Field = ({
         type={'password'}
         placeholder={placeholder}
         className={`border-solid border border-r-0 rounded-l-md w-full ${stylesPropsInput}`}
-        onChange={(e) => {
-          handleChange(e)
-        }}
       />
       <SeeIcon
         seePassword={seePassword}
@@ -56,9 +39,6 @@ const Field = ({
         type={'text'}
         placeholder={placeholder}
         className={`border-solid border border-r-0 rounded-l-md w-full ${stylesPropsInput}`}
-        onChange={(e) => {
-          handleChange(e)
-        }}
       />
       <SeeIcon
         seePassword={seePassword}
@@ -69,4 +49,4 @@ const Field = ({
   )
 }
 
-export default Field
+export default LoginField

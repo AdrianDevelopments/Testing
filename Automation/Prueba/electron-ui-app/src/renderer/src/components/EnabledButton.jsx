@@ -1,9 +1,8 @@
-import { useState } from 'react'
-import {
-  validateButton
-} from '../functions/validateSignUpFields'
+import { useContext, useEffect, useState } from 'react'
+import { SignUpContext } from '../contexts/SignUpContext'
+import { validateButton } from '../functions/validateSignUpFields'
 
-const CustomButton = ({
+const EnabledCustomButton = ({
   defaultBackgroundColor,
   defaultTextColor,
   hoverBackgroundColor,
@@ -46,22 +45,31 @@ const CustomButton = ({
     boxShadow: 'inset 5px 5px 10px 0 rgba(0, 0, 0, 0.1)'
   }
 
+  const disabledButtonStyle = {
+    backgroundColor: disabledBackgroundColor,
+    color: defaultTextColor,
+    padding,
+    borderRadius,
+    boxShadow: '0 10px 30px -3px rgba(0,0,0, 0.5)'
+  }
+
   return (
     <button
       style={active ? activeButtonStyle : hover ? hoverButtonStyle : defaultButtonStyle}
-      onMouseEnter={() => setHover(true)}
+      onMouseEnter={() => {
+        setHover(true)
+      }}
       onMouseLeave={() => {
         setHover(false)
         setActive(false)
       }}
       onMouseDown={() => setActive(true)}
       onMouseUp={() => setActive(false)}
-      onClick={() =>{}
-      }
+      onClick={() => {}}
     >
       {text}
     </button>
   )
 }
 
-export default CustomButton
+export default EnabledCustomButton

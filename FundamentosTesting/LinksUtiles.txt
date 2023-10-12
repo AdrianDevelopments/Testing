@@ -3,3 +3,5 @@ Casos de prueba del curso: https://docs.google.com/spreadsheets/d/1DDWOfdn40_3l4
 Mis casos de prueba: https://docs.google.com/spreadsheets/d/1gou2rXEDVcDijAuX_6t3zwDAQG6kFdvFye5vm5SlgkM/edit?usp=sharing
 
 Link a los screens de la app: https://docs.google.com/document/d/12RK0MWpR0x1pfwOY17TGDfMFJk9fSNrHf9rNOJEGD6k/edit
+
+Link al Test Summary Report: https://docs.google.com/document/d/1PmayrShEgUoz-ZNlY9gP2Fi1Qj1RJ-aE7cRnlpH0nng/edit

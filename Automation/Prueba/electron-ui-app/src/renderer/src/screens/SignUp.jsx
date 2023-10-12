@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
-import Field from '../components/Fields'
+import SignUpField from '../components/SignUpFields'
 import IconImage from '../assets/yarilyn.jpeg'
-import CustomButton from '../components/Button'
+import DisabledCustomButton from '../components/DisabledButton'
 import SignUpIcon from '../components/SignUpIcon'
 import SignUpState from '../contexts/SignUpContext'
 import { validateEmail } from '../functions/validateSignUpFields'
@@ -18,7 +18,7 @@ const SignUp = () => {
       <SignUpState>
         <div className="flex flex-row gap-9 place-content-center w-full">
           <label htmlFor="register-name-input">Full name: </label>
-          <Field
+          <SignUpField
             typeInput={'text'}
             placeholder={'Input your full name'}
             stylesPropsContainer={'w-2/4'}
@@ -28,7 +28,7 @@ const SignUp = () => {
         </div>
         <div className="flex flex-row gap-16 place-content-center w-full">
           <label htmlFor="register-email-input">Email: </label>
-          <Field
+          <SignUpField
             typeInput={'email'}
             placeholder={'Input your email'}
             stylesPropsContainer={'w-2/4'}
@@ -38,7 +38,7 @@ const SignUp = () => {
         </div>
         <div className="flex flex-row gap-9 place-content-center w-full">
           <label htmlFor="register-password-input">Password: </label>
-          <Field
+          <SignUpField
             typeInput={'password'}
             placeholder={'Input your password'}
             stylesPropsContainer={'w-2/4'}
@@ -52,7 +52,7 @@ const SignUp = () => {
           <label htmlFor="register-password-input" className=" -ml-8">
             Confirm password:{' '}
           </label>
-          <Field
+          <SignUpField
             typeInput={'password'}
             placeholder={'Input your password'}
             stylesPropsContainer={'w-2/4'}
@@ -61,7 +61,7 @@ const SignUp = () => {
             borderColor={'#172554'}
           />
         </div>
-        <CustomButton
+        <DisabledCustomButton
           text={'Register'}
           padding={'10px'}
           borderRadius={'5px'}
@@ -70,6 +70,7 @@ const SignUp = () => {
           hoverBackgroundColor={'white'}
           hoverTextColor={'#172554'}
           hoverBorderColor={'#172554'}
+          disabledBackgroundColor={'#9CA3AF'}
         />
       </SignUpState>
 

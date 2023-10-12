@@ -1,8 +1,8 @@
-import Field from '../components/Fields.jsx'
+import LoginField from '../components/LoginFields.jsx'
 import IconImage from '../assets/yarilyn.jpeg'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-import CustomButton from '../components/Button.jsx'
+import EnabledCustomButton from '../components/DisabledButton.jsx'
 import LoginIcon from '../components/LoginIcon.jsx'
 
 const Login = () => {
@@ -18,7 +18,7 @@ const Login = () => {
         <form className="w-full flex flex-col items-center gap-10">
           <div className="flex flex-row gap-14 place-content-center w-full">
             <label htmlFor="login-username-input">E-mail:</label>
-            <Field
+            <LoginField
               typeInput={'email'}
               placeholder={'Input your email'}
               stylesPropsContainer={'w-1/2'}
@@ -28,13 +28,13 @@ const Login = () => {
 
           <div className="flex flex-row gap-9 place-content-center w-full">
             <label htmlFor="login-password-input">Password:</label>
-            <Field
+            <LoginField
               typeInput={'password'}
               placeholder={'Input your password'}
               stylesPropsContainer={'w-2/4'}
               stylesPropsInput={'p-1 border-blue-500'}
               borderColor={'#3B82F6'}
-            ></Field>
+            />
           </div>
           <Link to={'/sign-up'} className="text-blue-400 underline hover:text-blue-500">
             You do not have an account? Sign up
@@ -42,7 +42,7 @@ const Login = () => {
           <Link className="text-blue-400 underline hover:text-blue-400">
             Forgot password? Recovery it here
           </Link>
-          <CustomButton
+          <EnabledCustomButton
             text={'Access'}
             padding={'10px'}
             borderRadius={'5px'}
