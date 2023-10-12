@@ -1,10 +1,22 @@
 import { createContext, useReducer, useEffect } from 'react'
 
 const initialFormState = {
-  nameValue: '',
-  emailValue: '',
-  passwordValue: '',
-  confirmPasswordValue: '',
+  name: {
+    nameValue: '',
+    clicked: false
+  },
+  email: {
+    emailValue: '',
+    clicked: false
+  },
+  password: {
+    passwordValue: '',
+    clicked: false
+  },
+  confirmPassword: {
+    confirmPasswordValue: '',
+    clicked: false
+  },
   buttonValue: false
 }
 
@@ -19,7 +31,10 @@ const signUpReducer = (state, action) => {
   } else {
     return {
       ...state,
-      [action.field]: action.value
+      [action.name]: {
+        [action.field]: action.value,
+        clicked: true
+      }
     }
   }
 }

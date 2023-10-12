@@ -24,6 +24,7 @@ const SignUp = () => {
             stylesPropsContainer={'w-2/4'}
             stylesPropsInput={'p-1 border-blue-950'}
             stateName={'nameValue'}
+            name={'name'}
           />
         </div>
         <div className="flex flex-row gap-16 place-content-center w-full">
@@ -34,6 +35,7 @@ const SignUp = () => {
             stylesPropsContainer={'w-2/4'}
             stylesPropsInput={'p-1 border-blue-950'}
             stateName={'emailValue'}
+            name={'email'}
           />
         </div>
         <div className="flex flex-row gap-9 place-content-center w-full">
@@ -45,6 +47,7 @@ const SignUp = () => {
             stylesPropsInput={'p-1 border-blue-950'}
             stateName={'passwordValue'}
             borderColor={'#172554'}
+            name={'password'}
           />
         </div>
 
@@ -59,6 +62,7 @@ const SignUp = () => {
             stylesPropsInput={'p-1 border-blue-950'}
             stateName={'confirmPasswordValue'}
             borderColor={'#172554'}
+            name={'confirmPassword'}
           />
         </div>
         <DisabledCustomButton

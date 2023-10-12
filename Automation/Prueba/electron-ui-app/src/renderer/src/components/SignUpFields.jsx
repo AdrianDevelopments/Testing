@@ -8,14 +8,15 @@ const SignUpField = ({
   stylesPropsContainer,
   stylesPropsInput,
   borderColor,
-  stateName
+  stateName,
+  name
 }) => {
   const [seePassword, setSeePassword] = useState(true)
 
   const [state, dispatch] = useContext(SignUpContext)
 
   const handleChange = (e) => {
-    dispatch({ field: stateName, value: e.target.value })
+    dispatch({ name, field: stateName, value: e.target.value })
   }
 
   useEffect(() => {
