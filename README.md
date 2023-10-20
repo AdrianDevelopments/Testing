@@ -10,7 +10,7 @@ the script repeats the process until it fills out the form by tenth time. It als
 it is still in progress.
 
 If you want to prove it, follow the next instructions:  
-1. Clone this repository: `git clone https://github.com/AdrianDevelopments/Testing`  
+1. Clone this repository: `git clone https://github.com/AdrianPolanco/SeleniumAutomationScript.git`  
 2. Navigate to Automation/Prueba directory: `cd Automation/Prueba`
 3. Install the dependencies: `npm i`
 4. Run the script: `npm run start`
