@@ -1,5 +1,4 @@
-# Testing
-English:
+# English:
 
 This is a repository I made in order to keep, track and prove my actions/knowledges about software testing, for now this repository consists of five directories,
 I will accompany each one with a brief description of its content:
@@ -22,12 +21,9 @@ If you want to prove it, follow the next instructions:
 </pre>
 
 <button class="btn" data-clipboard-text="git clone https://github.com/tu-usuario/tu-repositorio.git">
-  Copy to clipboard
 </button>
 
-<script>
-  new ClipboardJS('.btn');
-</script>
+
 2. Navigate to Automation/Prueba directory:
 
 <pre>
@@ -36,13 +32,9 @@ If you want to prove it, follow the next instructions:
   </code>
 </pre>
 
-<button class="btn" data-clipboard-text="git clone https://github.com/tu-usuario/tu-repositorio.git">
-  Copy to clipboard
+<button class="btn" data-clipboard-text="cd Automation/Prueba">
 </button>
 
-<script>
-  new ClipboardJS('.btn');
-</script> 
 3. Install the dependencies:
 <pre>
   <code>
@@ -50,13 +42,9 @@ If you want to prove it, follow the next instructions:
   </code>
 </pre>
 
-<button class="btn" data-clipboard-text="git clone https://github.com/tu-usuario/tu-repositorio.git">
-  Copy to clipboard
+<button class="btn" data-clipboard-text="npm i">
 </button>
 
-<script>
-  new ClipboardJS('.btn');
-</script>
 4. Run the script: 
 
 <pre>
@@ -65,38 +53,30 @@ If you want to prove it, follow the next instructions:
   </code>
 </pre>
 
-<button class="btn" data-clipboard-text="git clone https://github.com/tu-usuario/tu-repositorio.git">
-  Copy to clipboard
+<button class="btn" data-clipboard-text="npm run start">
 </button>
 
-<script>
-  new ClipboardJS('.btn');
-</script>
-5. Provide a link to a form that meets requeriments mentioned above, for example this link: <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+5. Provide a link to a form that meets requeriments mentioned above, for example this link:
 <pre>
   <code>
     https://forms.gle/rjFmRwngx1LUc5mm7
   </code>
 </pre>
 
-<button class="btn" data-clipboard-text="git clone https://github.com/tu-usuario/tu-repositorio.git">
-  Copy to clipboard
+<button class="btn" data-clipboard-text="https://forms.gle/rjFmRwngx1LUc5mm7">
 </button>
 
-<script>
-  new ClipboardJS('.btn');
-</script>
 6. The script will run in a few seconds, after finish the first filling process in a few seconds it will log the hour of the execution of the script and when the script will run again
  
 -FundamentosTesting: It contains some annotations about testing concepts I studied in order to remember and review them.
+
 -SQL: It contains some  SQL exercises solved with SQL scripts written in SQL Server.  
--ISQTB: Contains the english and spanish version of the fourth version of the ISQTB Foundations syllabus I have been studying.  
+
+-ISQTB: Contains the english and spanish version of the fourth version of the ISQTB Foundations syllabus I have been studying. 
+
 -UML: Contains a little Case Use Diagram about the UI project I mentioned above.
 
-Español:
-
-# Pruebas
-Inglés:
+# Español:
 
 Este es un repositorio que hice con el fin de mantener, rastrear y probar mis acciones/conocimientos sobre pruebas de software, por ahora este repositorio consta de cinco directorios,
 Acompañaré cada uno de ellos con una breve descripción de su contenido:
@@ -116,13 +96,9 @@ Si quieres comprobarlo, sigue las siguientes instrucciones:
 </pre>
 
 <button class="btn" data-clipboard-text="git clone https://github.com/tu-usuario/tu-repositorio.git">
-   Copiar al portapapeles
 </button>
 
 </pre>
-<script>
-   new ClipboardJS('.btn');
-</script>
 2. Navegue al directorio Automatización/Prueba:
 <pre>
    <code>
@@ -130,14 +106,11 @@ Si quieres comprobarlo, sigue las siguientes instrucciones:
    </code>
 </pre>
 
-<button class="btn" data-clipboard-text="git clone https://github.com/tu-usuario/tu-repositorio.git">
-   Copiar al portapapeles
+<button class="btn" data-clipboard-text="cd Automatización/Prueba">
 </button>
 
 </pre>
-<script>
-   new ClipboardJS('.btn');
-</script>
+
 3. Instale las dependencias: 
 <pre>
    <code>
@@ -145,43 +118,41 @@ Si quieres comprobarlo, sigue las siguientes instrucciones:
    </code>
 </pre>
 
-<button class="btn" data-clipboard-text="git clone https://github.com/tu-usuario/tu-repositorio.git">
-   Copiar al portapapeles
+<button class="btn" data-clipboard-text="npm i">
 </button>
 
 </pre>
-<script>
-   new ClipboardJS('.btn');
-</script>
+
 4. Ejecute el script:
-5. <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
 <pre>
    <code>
-     inicio de ejecución de npm
+     npm run start
    </code>
 </pre>
 
-<button class="btn" data-clipboard-text="git clone https://github.com/tu-usuario/tu-repositorio.git">
-   Copiar al portapapeles
+<button class="btn" data-clipboard-text="npm run start">
 </button>
 
 </pre>
-<script>
-   new ClipboardJS('.btn');
-</script>
-6. Proporcione un enlace a un formulario que cumpla con los requisitos mencionados anteriormente, por ejemplo este enlace: <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min. js"></script>
+
+5. Proporcione un enlace a un formulario que cumpla con los requisitos mencionados anteriormente, por ejemplo este enlace:
 <pre>
    <code>
      https://forms.gle/rjFmRwngx1LUc5mm7
    </code>
 </pre>
 
-<button class="btn" data-clipboard-text="git clone https://github.com/tu-usuario/tu-repositorio.git">
-   Copiar al portapapeles
+<button class="btn" data-clipboard-text="https://forms.gle/rjFmRwngx1LUc5mm7">
 </button>
 
 </pre>
-<script>
-   new ClipboardJS('.btn');
-</script>
-8. El script se ejecutará en unos segundos, después de finalizar el primer proceso de llenado en unos segundos registrará la hora de ejecución del script y cuándo se ejecutará nuevamente.
+
+6. El script se ejecutará en unos segundos, después de finalizar el primer proceso de llenado en unos segundos registrará la hora de ejecución del script y cuándo se ejecutará nuevamente.
+
+-FundamentosTesting: Contiene algunas anotaciones sobre conceptos de testing que estudié para recordarlos y revisarlos.
+
+-SQL: Contiene algunos ejercicios de SQL resueltos con scripts SQL escritos en SQL Server.
+
+-ISQTB: Contiene la versión en inglés y español de la cuarta versión del programa de Fundamentos ISQTB que he estado estudiando.
+
+-UML: Contiene un pequeño diagrama de uso de casos sobre el proyecto UI que mencioné anteriormente.
