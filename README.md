@@ -8,7 +8,7 @@ in Google Forms that follows a certain format (20 questions and five possible an
 the script repeats the process until it fills out the form by tenth time. It also contains a React/Electron project that I began in order to provide that script an User Interface and some extra-features,
 it is still in progress.
 
-If you want to prove it, YOU REQUIRE TO HAVE THE EDGE BROWSER INSTALLED, SINCE I MADE THE SCRIPT ON THIS BROWSER follow the next instructions:  
+If you want to prove it, **YOU REQUIRE TO HAVE THE EDGE BROWSER INSTALLED, SINCE I MADE THE SCRIPT ON THIS BROWSER** follow the next instructions:  
 
 
 
@@ -79,7 +79,7 @@ Acompañaré cada uno de ellos con una breve descripción de su contenido:
 en Google Forms que sigue un formato determinado (20 preguntas y cinco respuestas posibles) en un período aleatorio de minutos con una respuesta aleatoria entre las cinco respuestas posibles,
 el script repite el proceso hasta completar el formulario por décima vez. También contiene un proyecto React/Electron que comencé para proporcionarle a ese script una interfaz de usuario y algunas características adicionales, todavía está en progreso.
 
-Si quieres comprobarlo, sigue las siguientes instrucciones:
+Si quieres comprobarlo, **NECESITAS TENER EDGE INSTALADO, YA QUE HICE EL SCRIPT EN ESTE NAVEGADOR** sigue las siguientes instrucciones:
 
 
 1. Clona este repositorio: 
