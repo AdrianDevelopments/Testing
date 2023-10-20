@@ -8,9 +8,11 @@ in Google Forms that follows a certain format (20 questions and five possible an
 the script repeats the process until it fills out the form by tenth time. It also contains a React/Electron project that I began in order to provide that script an User Interface and some extra-features,
 it is still in progress.
 
-If you want to prove it, **YOU REQUIRE TO HAVE THE EDGE BROWSER INSTALLED, SINCE I MADE THE SCRIPT ON THIS BROWSER** follow the next instructions:  
+If you want to prove it, follow the next instructions:  
 
-
+ **YOU REQUIRE TO HAVE THE EDGE BROWSER INSTALLED, SINCE I MADE THE SCRIPT ON THIS BROWSER**
+ 
+ **YOU REQUIRE TO HAVE NODEJS INSTALLED IN YOUR MACHINE**
 
 
 1. Make a new directory, open the CMD inside this directory and paste this command: 
@@ -79,7 +81,11 @@ Acompañaré cada uno de ellos con una breve descripción de su contenido:
 en Google Forms que sigue un formato determinado (20 preguntas y cinco respuestas posibles) en un período aleatorio de minutos con una respuesta aleatoria entre las cinco respuestas posibles,
 el script repite el proceso hasta completar el formulario por décima vez. También contiene un proyecto React/Electron que comencé para proporcionarle a ese script una interfaz de usuario y algunas características adicionales, todavía está en progreso.
 
-Si quieres comprobarlo, **NECESITAS TENER EDGE INSTALADO, YA QUE HICE EL SCRIPT EN ESTE NAVEGADOR** sigue las siguientes instrucciones:
+Si quieres comprobarlo,  sigue las siguientes instrucciones:
+
+**NECESITAS TENER EDGE INSTALADO, YA QUE HICE EL SCRIPT EN ESTE NAVEGADOR**
+
+**NECESITAS TENER NODEJS INSTALADO EN TU COMPUTADORA**
 
 1. Crea una carpeta, abre la terminal dentro de la carpeta y pega este comando: 
 <pre>
