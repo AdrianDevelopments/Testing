@@ -28,11 +28,11 @@ If you want to prove it, follow the next instructions:
 
 <pre>
   <code>
-   cd Automation/Prueba
+   cd SeleniumAutomationScript/Automation/Prueba
   </code>
 </pre>
 
-<button class="btn" data-clipboard-text="cd Automation/Prueba">
+<button class="btn" data-clipboard-text="cd SeleniumAutomationScript/Automation/Prueba">
 </button>
 
 3. Install the dependencies:
@@ -102,11 +102,11 @@ Si quieres comprobarlo, sigue las siguientes instrucciones:
 2. Navegue al directorio Automatización/Prueba:
 <pre>
    <code>
-    cd Automatización/Prueba
+    cd SeleniumAutomationScript/Automation/Prueba
    </code>
 </pre>
 
-<button class="btn" data-clipboard-text="cd Automatización/Prueba">
+<button class="btn" data-clipboard-text="cd SeleniumAutomationScript/Automation/Prueba">
 </button>
 
 </pre>
