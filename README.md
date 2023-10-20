@@ -8,7 +8,7 @@ in Google Forms that follows a certain format (20 questions and five possible an
 the script repeats the process until it fills out the form by tenth time. It also contains a React/Electron project that I began in order to provide that script an User Interface and some extra-features,
 it is still in progress.
 
-If you want to prove it, follow the next instructions:  
+If you want to prove it, YOU REQUIRE TO HAVE THE EDGE BROWSER INSTALLED, SINCE I MADE THE SCRIPT ON THIS BROWSER follow the next instructions:  
 
 
 
