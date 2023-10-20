@@ -13,7 +13,7 @@ If you want to prove it, **YOU REQUIRE TO HAVE THE EDGE BROWSER INSTALLED, SINCE
 
 
 
-1. Clone this repository: 
+1. Make a new directory, open the CMD inside this directory and paste this command: 
 <pre>
   <code>
     git clone https://github.com/AdrianPolanco/SeleniumAutomationScript.git
@@ -60,7 +60,7 @@ If you want to prove it, **YOU REQUIRE TO HAVE THE EDGE BROWSER INSTALLED, SINCE
  for example this link: `https://docs.google.com/forms/d/e/1FAIpQLSfjhtEr64SInq0qOOTLqMwOv76CG4mxsfp7JQhfjZ1bt3NUDQ/viewform?usp=sf_link`
 
 
-7. The script will run in a few seconds, after finish the first filling process in a few seconds it will log the hour of the execution of the script and when the script will run again
+6. The script will run in a few seconds, after finish the first filling process in a few seconds it will log the hour of the execution of the script and when the script will run again
  
 -FundamentosTesting: It contains some annotations about testing concepts I studied in order to remember and review them.
 
@@ -81,8 +81,7 @@ el script repite el proceso hasta completar el formulario por décima vez. Tambi
 
 Si quieres comprobarlo, **NECESITAS TENER EDGE INSTALADO, YA QUE HICE EL SCRIPT EN ESTE NAVEGADOR** sigue las siguientes instrucciones:
 
-
-1. Clona este repositorio: 
+1. Crea una carpeta, abre la terminal dentro de la carpeta y pega este comando: 
 <pre>
    <code>
      git clone https://github.com/AdrianPolanco/SeleniumAutomationScript.git
