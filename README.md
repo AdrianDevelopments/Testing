@@ -56,14 +56,14 @@ If you want to prove it, follow the next instructions:
 <button class="btn" data-clipboard-text="npm run start">
 </button>
 
-5. Provide a link to a form that meets requeriments mentioned above, for example this link:
+5. Provide a link to a VALID form that meets requeriments mentioned above, for example this link:
 <pre>
   <code>
-    https://forms.gle/rjFmRwngx1LUc5mm7
+    https://docs.google.com/forms/d/e/1FAIpQLSfjhtEr64SInq0qOOTLqMwOv76CG4mxsfp7JQhfjZ1bt3NUDQ/viewform?usp=sf_link
   </code>
 </pre>
 
-<button class="btn" data-clipboard-text="https://forms.gle/rjFmRwngx1LUc5mm7">
+<button class="btn" data-clipboard-text="https://docs.google.com/forms/d/e/1FAIpQLSfjhtEr64SInq0qOOTLqMwOv76CG4mxsfp7JQhfjZ1bt3NUDQ/viewform?usp=sf_link">
 </button>
 
 6. The script will run in a few seconds, after finish the first filling process in a few seconds it will log the hour of the execution of the script and when the script will run again
@@ -138,11 +138,11 @@ Si quieres comprobarlo, sigue las siguientes instrucciones:
 5. Proporcione un enlace a un formulario que cumpla con los requisitos mencionados anteriormente, por ejemplo este enlace:
 <pre>
    <code>
-     https://forms.gle/rjFmRwngx1LUc5mm7
+     https://docs.google.com/forms/d/e/1FAIpQLSfjhtEr64SInq0qOOTLqMwOv76CG4mxsfp7JQhfjZ1bt3NUDQ/viewform?usp=sf_link
    </code>
 </pre>
 
-<button class="btn" data-clipboard-text="https://forms.gle/rjFmRwngx1LUc5mm7">
+<button class="btn" data-clipboard-text="https://docs.google.com/forms/d/e/1FAIpQLSfjhtEr64SInq0qOOTLqMwOv76CG4mxsfp7JQhfjZ1bt3NUDQ/viewform?usp=sf_link">
 </button>
 
 </pre>
