@@ -56,10 +56,11 @@ If you want to prove it, follow the next instructions:
 <button class="btn" data-clipboard-text="npm run start">
 </button>
 
-5. Provide a link to a VALID form that meets requeriments mentioned above, for example this link: `https://docs.google.com/forms/d/e/1FAIpQLSfjhtEr64SInq0qOOTLqMwOv76CG4mxsfp7JQhfjZ1bt3NUDQ/viewform?usp=sf_link`
+5. Provide a link to a VALID form that meets requeriments mentioned above,
+ for example this link: `https://docs.google.com/forms/d/e/1FAIpQLSfjhtEr64SInq0qOOTLqMwOv76CG4mxsfp7JQhfjZ1bt3NUDQ/viewform?usp=sf_link`
 
 
-6. The script will run in a few seconds, after finish the first filling process in a few seconds it will log the hour of the execution of the script and when the script will run again
+7. The script will run in a few seconds, after finish the first filling process in a few seconds it will log the hour of the execution of the script and when the script will run again
  
 -FundamentosTesting: It contains some annotations about testing concepts I studied in order to remember and review them.
 
