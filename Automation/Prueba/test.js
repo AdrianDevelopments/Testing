@@ -8,7 +8,7 @@ let service = new edge.ServiceBuilder(edgeDriver.findEdgePath);
 // Inicializa driver como null antes del bucle CountTime
 let driver = null;
 
-const ExecuteTest = async (driver, link) => {
+async function ExecuteTest(driver, link) {
     try {
         await driver.get(link);
 
@@ -35,7 +35,7 @@ const ExecuteTest = async (driver, link) => {
     } catch (error) {
         console.error(error);
     }
-};
+}
 
 const Timer = async (date, time, iteration, link) => {
     if (iteration === 0 || driver === null) {
